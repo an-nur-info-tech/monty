@@ -23,7 +23,6 @@ instruction_t *parse_line(char *line)
 	instruction->f = NULL;
 
 	/* opcode control statements */
-
 	if (instruction->opcode)
 	{
 		if (strcmp(instruction->opcode, "push") == 0)
@@ -40,10 +39,12 @@ instruction_t *parse_line(char *line)
 			instruction->f = add;
 		if (strcmp(instruction->opcode, "nop") == 0)
 			instruction->f = nop;
+		if (strcmp(instruction->opcode, "sub") == 0)
+			instruction->f = sub;
+		if (strcmp(instruction->opcode, "div") == 0)
+			instruction->f = divide;
+		if (strcmp(instruction->opcode, "mul") == 0)
+			instruction->f = multiply;
 	}
-
 	return (instruction);
-
-
-
 }
