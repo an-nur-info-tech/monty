@@ -49,6 +49,8 @@ instruction_t *parse_line(char *line)
 			instruction->f = m_mod;
 		if (strcmp(instruction->opcode, "pchar") == 0)
 			instruction->f = pchar;
+		if (strcmp(instruction->opcode, "pstr") == 0)
+			instruction->f = pstr;
 	}
 	return (instruction);
 }
