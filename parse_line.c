@@ -45,6 +45,8 @@ instruction_t *parse_line(char *line)
 			instruction->f = divide;
 		if (strcmp(instruction->opcode, "mul") == 0)
 			instruction->f = multiply;
+		if (strcmp(instruction->opcode, "mod") == 0)
+			instruction->f = m_mod;
 	}
 	return (instruction);
 }
