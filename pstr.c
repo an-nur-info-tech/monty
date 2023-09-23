@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * pstr - prints the string starting at the top of the stack 
+ * pstr - prints the string starting at the top of the stack
  * @stack: monty stack
  * @line_number: line number to grab
  */
