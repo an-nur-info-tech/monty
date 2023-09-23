@@ -6,11 +6,14 @@
  */
 void pstr(stack_t **stack, unsigned int line_number)
 {
+	stack_t *tmp;
+
 	UNUSED(line_number);
-	while (*stack != NULL && (*stack)->n != 0 && isprint((*stack)->n))
+	tmp = *stack;
+	while (tmp != NULL && tmp->n != 0 && isprint(tmp->n))
 	{
-		printf("%c", (*stack)->n);
-		*stack = (*stack)->next;
+		printf("%c", tmp->n);
+		tmp = tmp->next;
 	}
 	printf("\n");
 }
