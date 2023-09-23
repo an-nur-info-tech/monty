@@ -51,6 +51,10 @@ instruction_t *parse_line(char *line)
 			instruction->f = pchar;
 		if (strcmp(instruction->opcode, "pstr") == 0)
 			instruction->f = pstr;
+		if (strcmp(instruction->opcode, "rotl") == 0)
+			instruction->f = rotl;
+		if (strcmp(instruction->opcode, "rotr") == 0)
+			instruction->f = rotr;
 	}
 	return (instruction);
 }
